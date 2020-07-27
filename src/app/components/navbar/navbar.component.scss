@@ -1,0 +1,21 @@
+:host {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 111;
+  position: relative;
+  background-color: #e4e4e7;
+}
+
+a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 5px;
+  color: #070728;
+
+  &.active {
+    border-bottom: 1px solid #141440;
+  }
+}

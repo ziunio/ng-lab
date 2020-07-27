@@ -1,0 +1,39 @@
+<atft-orbit-controls [rotateSpeed]="1" [zoomSpeed]="1.2">
+  <atft-renderer-canvas>
+    <atft-perspective-camera
+      [zAxisUp]="true"
+      [fov]="60"
+      [near]="1"
+      [far]="1100"
+      positionX="50"
+      positionY="-20"
+      positionZ="50"
+    >
+    </atft-perspective-camera>
+    <atft-scene>
+      <atft-axes-helper size="200"></atft-axes-helper>
+      <atft-grid-helper
+        size="100"
+        divisions="10"
+        [rotateX]="90 | deg2rad"
+      ></atft-grid-helper>
+      <atft-point-light
+        distance="1000"
+        intensity="0.6"
+        translateX="90"
+        translateY="90"
+        translateZ="90"
+      >
+      </atft-point-light>
+      <atft-point-light distance="1000" intensity="0.6"></atft-point-light>
+      <atft-obj-loader
+        model="assets/model/smiley/smiley.obj"
+        material="assets/model/smiley/smiley.mtl"
+        texturePath="assets/model/smiley/"
+        translateX="-60"
+        translateY="-40"
+      >
+      </atft-obj-loader>
+    </atft-scene>
+  </atft-renderer-canvas>
+</atft-orbit-controls>
