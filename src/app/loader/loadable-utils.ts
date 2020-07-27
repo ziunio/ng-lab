@@ -7,7 +7,7 @@ import {
   OperatorFunction,
   Subscriber,
 } from "rxjs";
-import { map, pluck, switchMap } from "rxjs/operators";
+import { map, pluck, switchMap, shareReplay } from "rxjs/operators";
 
 export interface LoadablePayload<T> {
   type: "start" | "finish" | string;
@@ -52,7 +52,8 @@ export function valueOperation<T extends LoadablePayload<V>, V>(
       operation,
       switchMap((value) =>
         source$.pipe(map((source) => ({ ...source, value })))
-      )
+      ),
+      shareReplay(1)
     );
   };
 }
