@@ -1,0 +1,31 @@
+<h2 class="title">Products</h2>
+
+<div class="search-bar">
+  <input (input)="productsService.fetchProducts()" />
+</div>
+
+<div class="results">
+  <h3>Products</h3>
+  <div *ngIf="products$ | withLoading | async as obs">
+    <ng-template [ngIf]="obs.value">
+      {{ obs.value | json }}
+    </ng-template>
+    <ng-template [ngIf]="obs.loading">Loading...</ng-template>
+  </div>
+
+  <h3>Categories</h3>
+  <div *ngIf="categories$ | withLoading | async as obs">
+    <ng-template [ngIf]="obs.value">
+      {{ obs.value | json }}
+    </ng-template>
+    <ng-template [ngIf]="obs.loading">Loading...</ng-template>
+  </div>
+
+  <h3>Structure</h3>
+  <div *ngIf="structuredProducts$ | withLoading | async as obs">
+    <ng-template [ngIf]="!obs.loading">
+      {{ obs.value | json }}
+    </ng-template>
+    <ng-template [ngIf]="obs.loading">Loading...</ng-template>
+  </div>
+</div>
