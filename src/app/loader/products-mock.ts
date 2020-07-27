@@ -1,12 +1,12 @@
 export const PRODUCTS = [
-  "Koteł",
-  "Pieseł",
-  "Paweł",
-  "Tygryseł",
-  "Puchatke",
-  "Bazylia",
-  "Oregano",
-  "Frytki xD",
+  "Telewizor",
+  "Ketchup",
+  "Mikrofalówka",
+  "Worki na śmieci",
+  "Woda",
+  "Ciastka",
+  "Schab",
+  "Frytki",
 ];
 
-export const CATEGORIES = ["Zwierzęta", "Nie-zwierzęta"];
+export const CATEGORIES = ["Spożywcze", "Przemysłowe"];

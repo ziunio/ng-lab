@@ -1492,16 +1492,16 @@
         }
       }
       const N = [
-          "Kote\u0142",
-          "Piese\u0142",
-          "Pawe\u0142",
-          "Tygryse\u0142",
-          "Puchatke",
-          "Bazylia",
-          "Oregano",
-          "Frytki xD",
+          "Telewizor",
+          "Ketchup",
+          "Mikrofal\xf3wka",
+          "Worki na \u015bmieci",
+          "Woda",
+          "Ciastka",
+          "Schab",
+          "Frytki",
         ],
-        D = ["Zwierz\u0119ta", "Nie-zwierz\u0119ta"];
+        D = ["Spo\u017cywcze", "Przemys\u0142owe"];
       var U = n("GyhO"),
         L = n("itXk");
       const H = (t) =>
